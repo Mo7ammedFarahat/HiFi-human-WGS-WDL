@@ -1,0 +1,90 @@
+2024-07-31 05:28:24,043 INFO  - MaterializeWorkflowDescriptorActor [UUID(180c015e)]: Parsing workflow as WDL 1.0
+2024-07-31 05:28:24,897 INFO  - MaterializeWorkflowDescriptorActor [UUID(180c015e)]: Call-to-Backend assignments: sample_analysis.coverage_dropouts -> SLURM, sample_analysis.pbsv_discover -> SLURM, sample_analysis.pbmm2_align -> SLURM, sample_analysis.bcftools -> SLURM, deepvariant.deepvariant_postprocess_variants -> SLURM, hiphase.run_hiphase -> SLURM, deepvariant.deepvariant_call_variants -> SLURM, sample_analysis.mosdepth -> SLURM, sample_analysis.pbsv_call -> SLURM, sample_analysis.hificnv -> SLURM, sample_analysis.paraphase -> SLURM, sample_analysis.cpg_pileup -> SLURM, sample_analysis.merge_bams -> SLURM, sample_analysis.trgt -> SLURM, sample_analysis.concat_vcf -> SLURM, deepvariant.deepvariant_make_examples -> SLURM
+2024-07-31 05:28:25,033 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,033 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,034 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,035 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:25,035 WARN  - SLURM [UUID(180c015e)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 05:28:29,362 INFO  - WorkflowExecutionActor-180c015e-62ba-46f8-b63d-d4f1d4b0660e [UUID(180c015e)]: Starting sample_analysis.pbmm2_align
+2024-07-31 05:28:35,401 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(180c015e)sample_analysis.pbmm2_align:0:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 05:28:35,491 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(180c015e)sample_analysis.pbmm2_align:0:1]: `set -euo pipefail
+
+pbmm2 --version
+
+pbmm2 align \
+	--num-threads 24 \
+	--sort-memory 4G \
+	--preset HIFI \
+	--sample HG004_1 \
+	--log-level INFO \
+	--sort \
+	--unmapped \
+	/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+	/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/inputs/1497664899/HG004_1.bam \
+	HG004_1.HG004_1.GRCh38.aligned.bam
+
+# movie stats
+extract_read_length_and_qual.py \
+	/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/inputs/1497664899/HG004_1.bam \
+> HG004_1.HG004_1.read_length_and_quality.tsv
+
+awk '{{ b=int($2/1000); b=(b>39?39:b); print 1000*b "\t" $2; }}' \
+	HG004_1.HG004_1.read_length_and_quality.tsv \
+	| sort -k1,1g \
+	| datamash -g 1 count 1 sum 2 \
+	| awk 'BEGIN {{ for(i=0;i<=39;i++) {{ print 1000*i"\t0\t0"; }} }} {{ print; }}' \
+	| sort -k1,1g \
+	| datamash -g 1 sum 2 sum 3 \
+> HG004_1.HG004_1.read_length_summary.tsv
+
+awk '{{ print ($3>50?50:$3) "\t" $2; }}' \
+		HG004_1.HG004_1.read_length_and_quality.tsv \
+	| sort -k1,1g \
+	| datamash -g 1 count 1 sum 2 \
+	| awk 'BEGIN {{ for(i=0;i<=60;i++) {{ print i"\t0\t0"; }} }} {{ print; }}' \
+	| sort -k1,1g \
+	| datamash -g 1 sum 2 sum 3 \
+> HG004_1.HG004_1.read_quality_summary.tsv`
+2024-07-31 05:28:35,520 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(180c015e)sample_analysis.pbmm2_align:0:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1 &&
+    echo "successfully pulled quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_180c015e_pbmm2_align \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 24 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0:/cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0 $IMAGE /bin/bash /cromwell-executions/sample_analysis/180c015e-62ba-46f8-b63d-d4f1d4b0660e/call-pbmm2_align/shard-0/execution/script"

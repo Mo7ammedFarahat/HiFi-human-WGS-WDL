@@ -1,0 +1,692 @@
+2024-07-31 12:09:56,710 INFO  - MaterializeWorkflowDescriptorActor [UUID(1fa7b827)]: Parsing workflow as WDL 1.0
+2024-07-31 12:09:57,514 INFO  - MaterializeWorkflowDescriptorActor [UUID(1fa7b827)]: Call-to-Backend assignments: sample_analysis.merge_bams -> SLURM, sample_analysis.pbsv_discover -> SLURM, sample_analysis.hificnv -> SLURM, sample_analysis.concat_vcf -> SLURM, sample_analysis.pbmm2_align -> SLURM, sample_analysis.bcftools -> SLURM, sample_analysis.cpg_pileup -> SLURM, sample_analysis.coverage_dropouts -> SLURM, sample_analysis.trgt -> SLURM, hiphase.run_hiphase -> SLURM, deepvariant.deepvariant_call_variants -> SLURM, deepvariant.deepvariant_postprocess_variants -> SLURM, sample_analysis.paraphase -> SLURM, sample_analysis.pbsv_call -> SLURM, sample_analysis.mosdepth -> SLURM, deepvariant.deepvariant_make_examples -> SLURM
+2024-07-31 12:09:57,660 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,661 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:09:57,662 WARN  - SLURM [UUID(1fa7b827)]: Key/s [preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2024-07-31 12:10:02,043 INFO  - WorkflowExecutionActor-1fa7b827-1a63-419a-abbc-29539c1c901e [UUID(1fa7b827)]: Starting sample_analysis.pbmm2_align
+2024-07-31 12:10:14,558 WARN  - BackendPreparationActor_for_1fa7b827:sample_analysis.pbmm2_align:0:1 [UUID(1fa7b827)]: Docker lookup failed
+java.lang.Exception: Failed to get docker hash for quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1 Error connecting to https://quay.io using address quay.io:443 (unresolved: false)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor.cromwell$engine$workflow$WorkflowDockerLookupActor$$handleLookupFailure(WorkflowDockerLookupActor.scala:222)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor$$anonfun$3.applyOrElse(WorkflowDockerLookupActor.scala:88)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor$$anonfun$3.applyOrElse(WorkflowDockerLookupActor.scala:73)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:35)
+	at akka.actor.FSM.processEvent(FSM.scala:707)
+	at akka.actor.FSM.processEvent$(FSM.scala:704)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor.akka$actor$LoggingFSM$$super$processEvent(WorkflowDockerLookupActor.scala:40)
+	at akka.actor.LoggingFSM.processEvent(FSM.scala:847)
+	at akka.actor.LoggingFSM.processEvent$(FSM.scala:829)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor.processEvent(WorkflowDockerLookupActor.scala:40)
+	at akka.actor.FSM.akka$actor$FSM$$processMsg(FSM.scala:701)
+	at akka.actor.FSM$$anonfun$receive$1.applyOrElse(FSM.scala:695)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:35)
+	at cromwell.docker.DockerClientHelper$$anonfun$dockerResponseReceive$1.applyOrElse(DockerClientHelper.scala:16)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:269)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:270)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at cromwell.engine.workflow.WorkflowDockerLookupActor.aroundReceive(WorkflowDockerLookupActor.scala:40)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:614)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:583)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2024-07-31 12:10:14,644 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 12:10:14,774 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: `set -euo pipefail
+
+pbmm2 --version
+
+pbmm2 align \
+	--num-threads 24 \
+	--sort-memory 4G \
+	--preset HIFI \
+	--sample HG004_1 \
+	--log-level INFO \
+	--sort \
+	--unmapped \
+	/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+	/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/inputs/1497664899/HG004_1.bam \
+	HG004_1.HG004_1.GRCh38.aligned.bam
+
+# movie stats
+extract_read_length_and_qual.py \
+	/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/inputs/1497664899/HG004_1.bam \
+> HG004_1.HG004_1.read_length_and_quality.tsv
+
+awk '{{ b=int($2/1000); b=(b>39?39:b); print 1000*b "\t" $2; }}' \
+	HG004_1.HG004_1.read_length_and_quality.tsv \
+	| sort -k1,1g \
+	| datamash -g 1 count 1 sum 2 \
+	| awk 'BEGIN {{ for(i=0;i<=39;i++) {{ print 1000*i"\t0\t0"; }} }} {{ print; }}' \
+	| sort -k1,1g \
+	| datamash -g 1 sum 2 sum 3 \
+> HG004_1.HG004_1.read_length_summary.tsv
+
+awk '{{ print ($3>50?50:$3) "\t" $2; }}' \
+		HG004_1.HG004_1.read_length_and_quality.tsv \
+	| sort -k1,1g \
+	| datamash -g 1 count 1 sum 2 \
+	| awk 'BEGIN {{ for(i=0;i<=60;i++) {{ print i"\t0\t0"; }} }} {{ print; }}' \
+	| sort -k1,1g \
+	| datamash -g 1 sum 2 sum 3 \
+> HG004_1.HG004_1.read_quality_summary.tsv`
+2024-07-31 12:10:14,807 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1 &&
+    echo "successfully pulled quay.io/pacbio/pbmm2@sha256:1013aa0fd5fb42c607d78bfe3ec3d19e7781ad3aa337bf84d144c61ed7d51fa1!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fa7b827_pbmm2_align \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 24 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbmm2_align/shard-0/execution/script"
+2024-07-31 15:03:46,353 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: job id: 9904376
+2024-07-31 15:03:46,364 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: Cromwell will watch for an rc file but will *not* double-check whether this job is actually alive (unless Cromwell restarts)
+2024-07-31 15:03:46,367 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: Status change from - to Running
+2024-07-31 15:03:47,367 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbmm2_align:0:1]: Status change from Running to Done
+2024-07-31 15:03:48,580 INFO  - WorkflowExecutionActor-1fa7b827-1a63-419a-abbc-29539c1c901e [UUID(1fa7b827)]: Starting sample_analysis.pbsv_discover
+2024-07-31 15:03:56,798 INFO  - 1fe5c401-558e-4ca9-9c24-392cbf8acf7b-SubWorkflowActor-SubWorkflow-deepvariant:-1:1 [UUID(1fe5c401)]: Starting deepvariant.deepvariant_make_examples (8 shards)
+2024-07-31 15:03:57,840 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbsv_discover:0:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:03:57,880 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbsv_discover:0:1]: `set -euo pipefail
+
+pbsv --version
+
+pbsv discover \
+	--log-level INFO \
+	--hifi \
+	--tandem-repeats /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.trf.bed \
+	/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+	HG004_1.HG004_1.GRCh38.aligned.svsig.gz`
+2024-07-31 15:03:57,891 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fa7b827)sample_analysis.pbsv_discover:0:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo quay.io/pacbio/pbsv@sha256:d78ee6deb92949bdfde98d3e48dab1d871c177d48d8c87c73d12c45bdda43446 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://quay.io/pacbio/pbsv@sha256:d78ee6deb92949bdfde98d3e48dab1d871c177d48d8c87c73d12c45bdda43446 &&
+    echo "successfully pulled quay.io/pacbio/pbsv@sha256:d78ee6deb92949bdfde98d3e48dab1d871c177d48d8c87c73d12c45bdda43446!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fa7b827_pbsv_discover \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 2 \
+  --mem-per-cpu=8589934592 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-pbsv_discover/shard-0/execution/script"
+2024-07-31 15:04:08,647 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:2:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,647 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:6:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,649 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:1:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,650 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,651 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:7:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,655 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:4:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,657 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:5:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,658 WARN  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:3:1]: Unrecognized runtime attribute keys: preemptible, disk, queueArn, disks, awsBatchRetryAttempts, zones
+2024-07-31 15:04:08,704 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 0 7 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.0.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.0.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,704 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:5:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 40 47 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.40.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.40.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,705 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:2:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 16 23 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.16.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.16.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,714 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:4:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 32 39 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.32.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.32.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,719 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:6:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 48 55 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.48.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.48.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,721 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:3:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 24 31 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.24.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.24.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,722 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:7:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 56 63 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.56.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.56.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,722 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:1:1]: `set -euo pipefail
+
+mkdir example_tfrecords nonvariant_site_tfrecords
+
+echo "DeepVariant version: $VERSION"
+
+seq 8 15 \
+| parallel \
+	--jobs 8 \
+	--halt 2 \
+	/opt/deepvariant/bin/make_examples \
+		--norealign_reads \
+		--vsc_min_fraction_indels 0.12 \
+		--pileup_image_width 199 \
+		--track_ref_reads \
+		--phase_reads \
+		--partition_size=25000 \
+		--max_reads_per_partition=600 \
+		--alt_aligned_pileup=diff_channels \
+		--add_hp_channel \
+		--sort_by_haplotypes \
+		--parse_sam_aux_fields \
+		--min_mapping_quality=1 \
+		--mode calling \
+		--ref /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1/inputs/-1086097408/human_GRCh38_no_alt_analysis_set.fasta \
+		--reads /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1/inputs/242228401/HG004_1.HG004_1.GRCh38.aligned.bam \
+		--examples example_tfrecords/HG004_1.examples.tfrecord@64.gz \
+		--gvcf nonvariant_site_tfrecords/HG004_1.gvcf.tfrecord@64.gz \
+		--task {}
+
+tar -zcvf HG004_1.8.example_tfrecords.tar.gz example_tfrecords
+tar -zcvf HG004_1.8.nonvariant_site_tfrecords.tar.gz nonvariant_site_tfrecords`
+2024-07-31 15:04:08,724 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:5:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-5/execution/script"
+2024-07-31 15:04:08,724 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-0/execution/script"
+2024-07-31 15:04:08,724 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:4:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-4/execution/script"
+2024-07-31 15:04:08,724 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:2:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-2/execution/script"
+2024-07-31 15:04:08,728 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:6:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-6/execution/script"
+2024-07-31 15:04:08,729 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:3:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-3/execution/script"
+2024-07-31 15:04:08,729 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:7:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-7/execution/script"
+2024-07-31 15:04:08,731 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:1:1]: executing: # Make sure the SINGULARITY_CACHEDIR variable is set. If not use a default
+# based on the users home.
+if [ -z $SINGULARITY_CACHEDIR ]; 
+  then CACHE_DIR=/scratch3/users/$USER/.singularity/cache
+  else CACHE_DIR=$SINGULARITY_CACHEDIR
+fi
+# Make sure cache dir exists so lock file can be created by flock
+mkdir -p $CACHE_DIR  
+LOCK_FILE=$CACHE_DIR/singularity_pull_flock
+# Create an exclusive filelock with flock. --verbose is useful for 
+# for debugging, as is the echo command. These show up in `stdout.submit`.
+IMAGE=$CACHE_DIR/$(echo gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 | sed 's/\//_/'g).sif
+if [ ! -f $IMAGE ]; then
+    flock --verbose --exclusive --timeout 900 $LOCK_FILE \
+    singularity pull --force $IMAGE docker://gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096 &&
+    echo "successfully pulled gcr.io/deepvariant-docker/deepvariant@sha256:98c3cdbc660abed420bd15ad2a671cb39dc120d54f52f1c1f7d6dc9ce5e9a096!"
+else
+    echo "Image $IMAGE already exists. Yay"
+fi
+
+# Submit the script to SLURM
+sbatch \
+  --wait \
+  -J cromwell_1fe5c401_deepvariant_make_examples \
+  -D /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1 \
+  -o /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1/execution/stdout \
+  -e /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1/execution/stderr \
+  -t 3600 \
+  -p Main \
+  -c 32 \
+  --mem-per-cpu=8000 \
+  --wrap "singularity exec --bind /scratch3/projects/003/gideonaw/PacBio_Workflow/HiFi-human-WGS-WDL/workflows/sample_analysis/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1:/cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1 $IMAGE /bin/bash /cromwell-executions/sample_analysis/1fa7b827-1a63-419a-abbc-29539c1c901e/call-deepvariant/deepvariant/1fe5c401-558e-4ca9-9c24-392cbf8acf7b/call-deepvariant_make_examples/shard-1/execution/script"
+2024-07-31 15:42:11,322 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: job id: 9904497
+2024-07-31 15:42:11,330 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: Cromwell will watch for an rc file but will *not* double-check whether this job is actually alive (unless Cromwell restarts)
+2024-07-31 15:42:11,331 INFO  - DispatchedConfigAsyncJobExecutionActor [UUID(1fe5c401)deepvariant.deepvariant_make_examples:0:1]: Status change from - to Running
